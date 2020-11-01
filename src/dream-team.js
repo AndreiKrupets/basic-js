@@ -3,7 +3,7 @@ const CustomError = require("../extensions/custom-error");
 module.exports = function createDreamTeam(members) {
   let result = '';
   if (!Array.isArray(members)) {return false}
-  if (members === 0) {return null}
+  if (members.length === 0) {return null}
   let membersOrder = members.sort();
   for (let name of members) {
     if (typeof name === 'string') {
